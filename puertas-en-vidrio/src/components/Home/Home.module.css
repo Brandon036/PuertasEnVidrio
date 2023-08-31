@@ -1,0 +1,30 @@
+.let{
+    position: relative;
+    top: 0px; left: -480px;    
+    text-align: justify;
+
+}
+
+.div{
+    display:flex
+}
+
+.img{
+        height: 200px;
+        border: 1px solid black;
+     
+        margin: 0 auto;
+}
+.letMis{
+    letter-spacing: 1px;
+    text-align: left;
+    justify-content: space-between; /* o cualquier otra propiedad de justificación que se adapte a tu diseño */
+    align-items: center;
+    flex: 1;
+    padding: 20px;
+    border: 1px solid #ccc;
+    display: flex;
+text-align: justify;
+}
+
+
