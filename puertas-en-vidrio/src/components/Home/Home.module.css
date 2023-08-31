@@ -15,6 +15,19 @@
      
         margin: 0 auto;
 }
+
+.imgT{
+    height: 170px;
+    border: 1px solid black;
+    margin: 0 auto;
+}
+.imgE{
+    position: relative;
+    top: 0px; left: 550px;    
+    height: 50px;
+    border: 1px solid black;
+    margin: 0 auto;
+}
 .letMis{
     letter-spacing: 1px;
     text-align: left;

@@ -37,6 +37,37 @@ TESTIMONIOS DE CLIENTES SATISFECHOS
 
 </div>
 </p>
+
+<h1>¿Quienes somos?</h1>
+<p className={styled.letMis}>
+Somos Fabricantes e instaladores de Puertas de Vidrio Templado, Fachadas en vidrio para locales,
+puertas de vidrio para oficinas, puertas de vidrio correderas, puertas de vidrio templado, puertas
+para centros comerciales en vidrio, etc, divisiones en vidrio para cualquier área, divisiones de baño
+en vidrio, Fabricamos pasamanos en acero inoxidable y vidrio, barandas en acero para balcones,
+escaleras o espacios abiertos y que necesiten seguridad o un diseño moderno, pueden ser con
+vidrio o solo acero, pisos en vidrio, puertas de seguridad en vidrio, ventaneria acústica, puertas
+acústicas, Cerramientos en vidrio para cualquier área, terraza, techos, etc, Instalamos cualquier
+tipo de obra relacionada con Vidrio, Acero y Aluminio, realizamos reparaciones en puertas de vidrio
+o mantenimiento de instalaciones en vidrio,arreglo de puertas en vidrio en general.
+</p>
+
+<h1>CLIENTES QUE CONFIAN EN NOSOTROS</h1>
+<p>
+<div className={styled.div}>
+<img  className={styled.imgT}src="https://www.vidriosdelasabana.com/wp-content/uploads/2016/04/logo-empresa-300x248-300x212.png"/>
+<img  className={styled.imgT}src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgGfeNrmoQnW1o3YPMM00C2guPP5csN0f4AoJb-CASS45xz_eK0IWz1sCYgif835E7YNE&usqp=CAU"/>
+<img  className={styled.imgT}src="https://distribuidoranikoll.com/wp-content/uploads/2023/04/IMG_20230426_120951_692.jpg"/>
+<img  className={styled.imgT}src="https://mir-s3-cdn-cf.behance.net/projects/404/e6ea2a46532305.Y3JvcCw0MDQsMzE2LDQ5Myw2NzM.jpg"/>
+</div>
+</p>
+<p>
+<img  className={styled.imgE}src="https://img.freepik.com/fotos-premium/5-estrellas-oro_103577-4146.jpg"/>
+</p>
+<h1>CUALIDADES DE LA EMPRESA</h1>
+<img  className={styled.img}src="https://exactitudeconsultancy.com/wp-content/uploads/2022/03/column-chart-98-e1648821697714.jpg"/>
+<h1>
+  PRODUCTOS
+</h1>
     </div>
     
   );
