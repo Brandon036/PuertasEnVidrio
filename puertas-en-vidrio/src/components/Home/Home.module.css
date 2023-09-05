@@ -40,4 +40,4 @@
 text-align: justify;
 }
 
-
+p{animation:scale-up-bottom 1.5s; } @keyframes scale-up-bottom{0%{transform:scale(.5);transform-origin:center bottom}100%{transform:scale(1);transform-origin:center bottom}}
