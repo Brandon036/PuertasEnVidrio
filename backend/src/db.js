@@ -1,7 +1,9 @@
 require("dotenv").config();
 const { Sequelize } = require("sequelize");
-const vidrioFunction= require('./models/ipuertasenvidrio')
-const divisionFunction = require ('./models/divisionesdevidrio')
+ const ipuertasenvidrio = require('./models/ipuertasenvidrio')
+ const divisionesenvidrio  = require ('./models/divisionesdevidrio')
+ const fachadasenvidrio = requiere("./models/fachadasenvidrio.js")
+
 const fs = require('fs');
 const path = require('path');
 const {
@@ -31,14 +33,14 @@ let entries = Object.entries(sequelize.models);
 let capsEntries = entries.map((entry) => [entry[0][0].toUpperCase() + entry[0].slice(1), entry[1]]);
 sequelize.models = Object.fromEntries(capsEntries);
 
-vidrioFunction(sequelize)
-divisionFunction(sequelize)
+ipuertasenvidrio(sequelize)
+fachadasenvidrio(sequelize)
+divisionesenvidrio(sequelize)
+const { ipuertasenvidrio, fachadasenvidrio, divisionesenvidrio} = sequelize.models;
 
-const { ipuertasenvidrio, divisionesenvidrio } = sequelize.models;
 
-
-ipuertasenvidrio.belongsToMany(divisionesenvidrio,{through:"VidrioFachada"})
-divisionesenvidrio.belongsToMany(ipuertasenvidrio,{through:"VidrioFachada"})
+// ipuertasenvidrio.belongsToMany(divisionesenvidrio,{through:"VidrioFachada"})
+// divisionesenvidrio.belongsToMany(ipuertasenvidrio,{through:"VidrioFachada"})
 
 
 // Aca vendrian las relaciones
