@@ -2,7 +2,7 @@ const { fachadasenvidrio } = require("../db");
 
 
 const getIFachadasEnVidrio = async ()=> { 
-  
+  console.log(fachadasenvidrio)
     const allIpuertasEnVidrio = await fachadasenvidrio.findAll()
    
 return allIpuertasEnVidrio;

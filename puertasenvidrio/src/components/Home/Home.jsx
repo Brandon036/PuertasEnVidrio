@@ -18,27 +18,14 @@ function Home() {
       </div>
       <div className={styled.triangulo5}>
       </div>
+      <div className={styled.triangulo6}>
+      </div>
       </div>
       
       <div className={styled.glassText}>
       <div className={styled.word}>
-        <h1 className={styled.letter}>P</h1>
-        <h1 className={styled.letter}>U</h1>
-        <h1 className={styled.letter}>E</h1>
-        <h1 className={styled.letter}>R</h1>
-        <h1 className={styled.letter}>T</h1>
-        <h1 className={styled.letter}>A</h1>
-        <h1 className={styled.letter}>S</h1>
-        <h1 className={styled.letter}> </h1>
-        <h1 className={styled.letter}>E</h1>
-        <h1 className={styled.letter}>N</h1>
-        <h1 className={styled.letter}> </h1>
-        <h1 className={styled.letter}>V</h1>
-        <h1 className={styled.letter}>I</h1>
-        <h1 className={styled.letter}>D</h1>
-        <h1 className={styled.letter}>R</h1>
-        <h1 className={styled.letter}>I</h1>
-        <h1 className={styled.letter}>O</h1>
+        <h2 className={styled.letter}>PUERTAS EN VIDRIO</h2>
+        
 
       </div>
 
@@ -65,7 +52,7 @@ TESTIMONIOS DE CLIENTES SATISFECHOS
 
 <img className={styled.img} src="https://aspectspain.files.wordpress.com/2011/05/satisfaccic3b3n-con-el-servicio-de-atencic3b3n-al-cliente.jpg"/>
 
-<h1>
+<h1 className={styled.letComunes}>
     Testimonios
 </h1>
 <p>
@@ -97,12 +84,13 @@ o mantenimiento de instalaciones en vidrio,arreglo de puertas en vidrio en gener
 <img  className={styled.imgT}src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgGfeNrmoQnW1o3YPMM00C2guPP5csN0f4AoJb-CASS45xz_eK0IWz1sCYgif835E7YNE&usqp=CAU"/>
 <img  className={styled.imgT}src="https://distribuidoranikoll.com/wp-content/uploads/2023/04/IMG_20230426_120951_692.jpg"/>
 <img  className={styled.imgT}src="https://mir-s3-cdn-cf.behance.net/projects/404/e6ea2a46532305.Y3JvcCw0MDQsMzE2LDQ5Myw2NzM.jpg"/>
+<img  className={styled.imgE}src="https://img.freepik.com/fotos-premium/5-estrellas-oro_103577-4146.jpg"/>
+
 </div>
 </p>
 <p>
-<img  className={styled.imgE}src="https://img.freepik.com/fotos-premium/5-estrellas-oro_103577-4146.jpg"/>
 </p>
-<h1>CUALIDADES DE LA EMPRESA</h1>
+<h1 className={styled.letComunes}>CUALIDADES DE LA EMPRESA</h1>
 <img  className={styled.img}src="https://exactitudeconsultancy.com/wp-content/uploads/2022/03/column-chart-98-e1648821697714.jpg"/>
 <h1 className={styled.letComunes}>
   PRODUCTOS
