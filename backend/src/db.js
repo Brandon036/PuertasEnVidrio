@@ -1,8 +1,9 @@
 require("dotenv").config();
 const { Sequelize } = require("sequelize");
- const ipuertasenvidrio = require('./models/ipuertasenvidrio')
- const divisionesenvidrio  = require ('./models/divisionesdevidrio')
- const fachadasenvidrio = requiere("./models/fachadasenvidrio.js")
+ const ipuertasenvidrioF = require('./models/ipuertasenvidrio')
+ const divisionesenvidrioF  = require ('./models/divisionesdevidrio')
+ const fachadasenvidrioF = require('./models/fachadasenvidrio.js')
+const adminF = require("./models/admin")
 
 const fs = require('fs');
 const path = require('path');
@@ -33,10 +34,11 @@ let entries = Object.entries(sequelize.models);
 let capsEntries = entries.map((entry) => [entry[0][0].toUpperCase() + entry[0].slice(1), entry[1]]);
 sequelize.models = Object.fromEntries(capsEntries);
 
-ipuertasenvidrio(sequelize)
-fachadasenvidrio(sequelize)
-divisionesenvidrio(sequelize)
-const { ipuertasenvidrio, fachadasenvidrio, divisionesenvidrio} = sequelize.models;
+ipuertasenvidrioF(sequelize)
+divisionesenvidrioF(sequelize)
+fachadasenvidrioF(sequelize)
+adminF(sequelize)
+const { ipuertasenvidrio, fachadasenvidrio, divisionesenvidrio , admin} = sequelize.models;
 
 
 // ipuertasenvidrio.belongsToMany(divisionesenvidrio,{through:"VidrioFachada"})
