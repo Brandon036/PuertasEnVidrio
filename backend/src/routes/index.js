@@ -4,6 +4,8 @@ const { Router } = require('express');
 const ipuertasenvidrioR = require("./ipuertasenvidrioR")
 const fachadasenvidrioR = require("./fachadasenvidrioR")
 const divisionesdevidrioR = require("./divisionesdevidrioR")
+const adminR = require("./adminR")
+
 
 const router = Router();
 
@@ -13,6 +15,12 @@ const router = Router();
 router.use("/fachadasenvidrio", fachadasenvidrioR)
 router.use('/ipuertasenvidrio', ipuertasenvidrioR);
 router.use("/divisionesdevidrio", divisionesdevidrioR)
+
+
+router.use("/admin", adminR)
+
+
+
 //router.use('/activity', activities);
 
 module.exports = router;

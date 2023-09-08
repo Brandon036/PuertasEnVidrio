@@ -4,17 +4,17 @@ const { divisionesenvidrio } = require("../db");
 
 
 const createIDivisionesDeVidrioC = async ( name,image,description  )=> {
- const newImage = await divisionesenvidrio.create ({
-       name,image, description 
+ const newDivisionesDeVidrio = await divisionesenvidrio.create ({
+       name, image, description 
  })
- return newImage
+ return newDivisionesDeVidrio
 }
 
 const getIDivisionesDeVidrio = async ()=> { 
   
-    const allIpuertasEnVidrio = await divisionesenvidrio.findAll()
+    const allDivisionesDeVidrio = await divisionesenvidrio.findAll()
    
-return allIpuertasEnVidrio;
+return allDivisionesDeVidrio;
 }
 
 module.exports = {
