@@ -1,0 +1,69 @@
+.div{
+    background-color: chocolate;
+    height: 1000px
+
+}
+
+.button1{
+    border: 100px;
+      display: inline-block;
+      border-radius: 4px;
+      background-color: #2c0d04;
+      border: none;
+      color: #FFFFFF;
+      text-align: center;
+      font-size: 15px;
+      padding: 10px;
+      width: 150px;
+      transition: all 0.5s;
+      cursor: pointer;
+      margin: 5px;
+    position: relative;
+    top: 50px; left: -300px;
+}
+
+.button2{
+    border: 100px;
+    background-color: chartreuse;
+    display: inline-block;
+    border-radius: 4px;
+    background-color: #2c0d04;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 15px;
+    padding: 10px;
+    width: 150px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+    position: relative;
+    top: 0px; left: 80px;  
+
+}
+
+.button3{
+
+    border: 100px;
+    background-color: chartreuse;
+    position: relative;
+    display: inline-block;
+    border-radius: 4px;
+    background-color: #2c0d04;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 15px;
+    padding: 10px;
+    width: 150px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+
+    top: -1px; left: 200px;  
+}
+
+.cs{
+    position: relative;
+    top: 200px; left: -200px; 
+}

@@ -1,26 +1,10 @@
 import styled from './Home.module.css'
-
+import { Link } from "react-router-dom";
+ <img  className={styled.img}/>
 function Home() {
   return (
     <div className={styled.divF} >
-      <div className={styled.fondotriangulo} >
-        <div className={styled.triangulo}>
-          
-      </div>
-      <div className={styled.triangulo1}>
-       
-     </div>
-      <div className={styled.triangulo2}>
-      </div>
-      <div className={styled.triangulo3}>
-      </div>
-      <div className={styled.triangulo4}>
-      </div>
-      <div className={styled.triangulo5}>
-      </div>
-      <div className={styled.triangulo6}>
-      </div>
-      </div>
+  
       
       <div className={styled.glassText}>
       <div className={styled.word}>
@@ -95,6 +79,18 @@ o mantenimiento de instalaciones en vidrio,arreglo de puertas en vidrio en gener
 <h1 className={styled.letComunes}>
   PRODUCTOS
 </h1>
+<div className={styled.divL}>
+<Link to={`/imgvidrio`}>
+ <img  className={styled.img} src='./divisiones1.jpeg' />
+</Link>
+
+<Link to={`/imgfachadas`}>
+<img  className={styled.img} src='./fachada1.jpeg' />
+</Link>
+<Link to={'/imgdivisiones'}>
+<img  className={styled.img} src='./vidrio1.jpeg' />
+</Link>
+</div>
     </div>
     
   );

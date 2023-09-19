@@ -196,3 +196,11 @@ width: 100hv
     color:azure
 
 }
+
+.divL{
+  display:flex;
+  animation: appearFromLeft 3s ease forwards; /* Animación más lenta */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+gap: 32px;
+}

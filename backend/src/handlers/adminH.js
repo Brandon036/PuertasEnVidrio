@@ -1,9 +1,9 @@
 const {adminH, createAdmin, findAdminName } = require("../controllers/adminC")
 
 const getAdminNameH = async (req, res) => {
-  const { name, password } = req.query
+  const { email, password } = req.body
   try {
-    const isAuthenticated = await findAdminName(name, password);
+    const isAuthenticated = await findAdminName(email, password);
     if (isAuthenticated) {
       res.status(200).json({ authenticated: true });
     } else {
@@ -43,4 +43,5 @@ const  postAdminH = async (req, res) => {// req (la solicitud HTTP) y res (la re
     }
   
   };
+  
 module.exports = { getAdminH,   postAdminH, getAdminNameH }
