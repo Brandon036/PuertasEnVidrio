@@ -41,8 +41,9 @@ adminF(sequelize)
 const { ipuertasenvidrio, fachadasenvidrio, divisionesenvidrio , admin} = sequelize.models;
 
 
-// ipuertasenvidrio.belongsToMany(divisionesenvidrio,{through:"VidrioFachada"})
-// divisionesenvidrio.belongsToMany(ipuertasenvidrio,{through:"VidrioFachada"})
+//ipuertasenvidrio.belongsToMany(divisionesenvidrio,{through:"VidrioFachada"})
+//divisionesenvidrio.belongsToMany(ipuertasenvidrio,{through:"VidrioFachada"})
+
 
 
 // Aca vendrian las relaciones

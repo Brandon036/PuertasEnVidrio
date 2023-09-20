@@ -12,7 +12,7 @@ module.exports = (sequelize) => {
     },
    
     image:{
-        type:DataTypes.TEXT,       
+        type:DataTypes.JSONB,       
     },
      description:{
         type:DataTypes.STRING,   

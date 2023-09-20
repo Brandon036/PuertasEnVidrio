@@ -3,13 +3,15 @@
     top: 0px; left: -480px;    
     text-align: justify;
     animation: appearFromLeft 3s ease forwards; /* Animación más lenta */
-
+color: rgb(255, 255, 255);
 }
 
 .div{
     display:flex;
     animation: appearFromLeft 3s ease forwards; /* Animación más lenta */
-
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+gap: 32px;
 }
 
 .img{
@@ -28,13 +30,10 @@
 
 }
 .imgE{
-    position: relative;
-    top: 0px; left: 550px;    
     height: 50px;
     border: 1px solid black;
     margin: 0 auto;
     animation: appearFromLeft 3s ease forwards; /* Animación más lenta */
-
 }
 .letMis{
     letter-spacing: 1px;
@@ -58,6 +57,7 @@ color:azure
     white-space: nowrap;
     overflow: hidden;
     animation: appearFromLeft 3s ease forwards; /* Animación más lenta */
+    color:azure
 
   }
   
@@ -72,7 +72,8 @@ color:azure
     opacity: 0;
     animation: appearFromLeft 3s ease forwards; /* Animación más lenta */
     margin-right: 10px; /* Espacio horizontal entre letras */
-    animation: appearFromLeft 3s ease forwards; /* Animación más lenta */
+    color:azure;
+ 
 
   }
   
@@ -93,7 +94,7 @@ color:azure
   
 .divF{
     background-image: url('../../img/fondoV.gif'); /* Ruta a tu imagen GIF */
-
+width: 100hv
 }
 
 
@@ -103,7 +104,8 @@ color:azure
   position: fixed;
   animation: appearFromLeft 3s ease forwards; /* Animación más lenta */
 
-   
+  display: flex;
+
  }
  .triangulo{
    
@@ -113,6 +115,7 @@ color:azure
     height: 150px;
     animation: myAnim 8s ease 0s infinite normal forwards;
    box-shadow: #fff;
+   display: flex;
 
  }
  .triangulo1{
@@ -121,6 +124,7 @@ color:azure
     width: 200px;
     height: 150px;
     animation: myAnim 8s ease 5s infinite normal forwards;
+    display: flex;
 
   
  }
@@ -130,6 +134,7 @@ color:azure
     width: 204px;
     height: 150px;
     animation: myAnim 8s ease 10s infinite normal forwards;
+    display: flex;
 
    
  }
@@ -139,6 +144,7 @@ color:azure
     width: 204px;
     height: 150px;
     animation: myAnim 8s ease 15s infinite normal forwards;
+    display: flex;
 
    
  }
@@ -148,6 +154,7 @@ color:azure
     width: 204px;
     height: 150px;
     animation: myAnim 8s ease 20s infinite normal forwards;
+    display: flex;
 
    
  }
@@ -157,9 +164,20 @@ color:azure
     width: 204px;
     height: 150px;
     animation: myAnim 8s ease 25s infinite normal forwards;
+    display: flex;
 
  }
  
+ .triangulo6{
+  background: rgb(7, 7, 7);
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 81% 99%, 50% 70%, 20% 100%, 32% 57%, 2% 35%, 39% 35%);
+  width: 204px;
+  height: 150px;
+  animation: myAnim 8s ease 30s infinite normal forwards;
+  display: flex;
+
+}
+
  @keyframes myAnim {
 	0% {
 		transform: translateY(0);
@@ -168,12 +186,21 @@ color:azure
 	100% {
 		transform: translateY(100%);
 	}
-    
+ 
 }
 
 
 
 .letComunes{
     animation: appearFromLeft 3s ease forwards; /* Animación más lenta */
+    color:azure
 
+}
+
+.divL{
+  display:flex;
+  animation: appearFromLeft 3s ease forwards; /* Animación más lenta */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+gap: 32px;
 }

@@ -1,15 +1,15 @@
 const { admin } = require('../db')
 
 
-const findAdminName = async (name, password) => {
-    const exist = await admin.findOne({ where: { name: name } });
+const findAdminName = async (email, password) => {
+    const exist = await admin.findOne({ where: { email: email } });
     if (exist) {
-        if (exist.password === password) {
+        if (exist.password === password && exist.email === email ) {
             login = true;
             return login;
         } else {
             login = false;
-            return (`Contraseña Incorrecta`);
+            throw Error(`Password Incorrecta`);
         }
     } else {
         login = false;
