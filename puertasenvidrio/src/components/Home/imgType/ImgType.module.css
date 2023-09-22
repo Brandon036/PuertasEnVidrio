@@ -9,7 +9,7 @@
   .container_1 {
     position: relative;
     text-align: center;
-    background: url("file:///C:/Users/USUARIO/Downloads/vidrio1.webp") no-repeat;
+    background: url("../../../../public/vidrio1.webp") no-repeat;
     margin: 0 auto;
     border: 1px solid black;
     margin: 0 auto;
@@ -19,7 +19,7 @@
  .container_2 {
   position: relative;
   text-align: center;
- background: url("file:///C:/Users/USUARIO/Downloads/divisiones1%20(1).webp") no-repeat;
+ background: url("../../../../public/divisiones1\ \(1\).webp") no-repeat;
  margin: 0 auto;
  border: 1px solid black;
     margin: 0 auto;
@@ -29,7 +29,7 @@
 .container_3 {
   position: relative;
   text-align: center;
-  background: url("file:///C:/Users/USUARIO/Downloads/fachada1.webp") no-repeat;
+  background: url("../../../../public/fachada1.webp") no-repeat;
   margin: 0 auto;
   border: 1px solid black;
     margin: 0 auto;
