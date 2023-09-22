@@ -38,11 +38,7 @@ width: 100%; /* Ancho del contenedor */
   }
 }
 
-iframe{
-  margin: 0 auto;
-  width:400px; 
-  height:200px;
-}
+
 .img{
         height: 200px;
         border: 1px solid black;

@@ -4,23 +4,45 @@
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   gap: 2px;
   }
-  .img{
+  
 
+  .container_1 {
+    position: relative;
+    text-align: center;
+    background: url("file:///C:/Users/USUARIO/Downloads/vidrio1.webp") no-repeat;
+    margin: 0 auto;
     border: 1px solid black;
     margin: 0 auto;
     width:400px; 
     height:500px;
-  
-  }
- 
-  .container_1 {
-    position: relative;
-    text-align: center;
  }
+ .container_2 {
+  position: relative;
+  text-align: center;
+ background: url("file:///C:/Users/USUARIO/Downloads/divisiones1%20(1).webp") no-repeat;
+ margin: 0 auto;
+ border: 1px solid black;
+    margin: 0 auto;
+    width:400px; 
+    height:500px;
+}
+.container_3 {
+  position: relative;
+  text-align: center;
+  background: url("file:///C:/Users/USUARIO/Downloads/fachada1.webp") no-repeat;
+  margin: 0 auto;
+  border: 1px solid black;
+    margin: 0 auto;
+    width:400px; 
+    height:500px;
+
+}
+
+
  
  .imgh2_1 {
    display: flex;
-    background: white;
+ background-color: rgb(177, 177, 189);
     font-weight: bold;
     margin:0;
         position: absolute;
