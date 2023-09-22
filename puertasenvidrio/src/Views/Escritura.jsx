@@ -25,7 +25,7 @@ function Escritura(props) {
   return (
     <div>
     <div className={style.typingeffect}>
-      <p>{text}</p>
+      <h1>{text}</h1>
     </div>
     </div>
   )

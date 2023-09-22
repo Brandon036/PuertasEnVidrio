@@ -1,14 +1,69 @@
 import styled from './Home.module.css'
-import { Link } from "react-router-dom";
- <img  className={styled.img}/>
+
+import  { useEffect, useState } from 'react';
+import ImgType from './imgType/ImgType';
 function Home() {
+  
+  const [text, setText] = useState('');
+  const originalText = "PUERTAS EN VIDRIO";
+  let index = 0;
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if (index <= originalText.length) {
+        setText(originalText.slice(0, index));
+        index++;
+      } else {
+        clearInterval(interval);
+      }
+    }, 100); // Velocidad de escritura (en milisegundos)
+
+    return () => clearInterval(interval);
+  }, []);
+
+  // const [text1, setText1] = useState('');
+  // const originalText1 = "CLIENTES QUE CONFIAN EN NOSOTROS";
+  // let index1 = 0;
+
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     if (index1 <= originalText1.length) {
+  //       setText1(originalText1.slice(0, index1));
+  //       index1++;
+  //     } else {
+  //       clearInterval(interval);
+  //     }
+  //   }, 100); // Velocidad de escritura (en milisegundos)
+
+  //   return () => clearInterval(interval);
+  // }, []);
+
+  // const [text2, setText2] = useState('');
+  // const originalText2 = "PRODUCTOS";
+  // let index2 = 0;
+
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     if (index2 <= originalText2.length) {
+  //       setText2(originalText2.slice(0, index2));
+  //       index2++;
+  //     } else {
+  //       clearInterval(interval);
+  //     }
+  //   }, 100); // Velocidad de escritura (en milisegundos)
+
+  //   return () => clearInterval(interval);
+  // }, []);
+
+
+
   return (
     <div className={styled.divF} >
   
       
       <div className={styled.glassText}>
       <div className={styled.word}>
-        <h2 className={styled.letter}>PUERTAS EN VIDRIO</h2>
+        <h2 className={styled.letter}>{text}</h2>
         
 
       </div>
@@ -41,9 +96,25 @@ TESTIMONIOS DE CLIENTES SATISFECHOS
 </h1>
 <p>
 <div className={styled.div}>
-<img  className={styled.img}src="https://buffer.com/resources/content/images/resources/wp-content/uploads/2017/02/video-stats@2x.png"/>
-<img  className={styled.img}src="https://buffer.com/resources/content/images/resources/wp-content/uploads/2017/02/video-stats@2x.png"/>
-<img  className={styled.img}src="https://buffer.com/resources/content/images/resources/wp-content/uploads/2017/02/video-stats@2x.png"/>
+{/* <iframe
+        width="560" // Ancho del video (ajusta según tus necesidades)
+        height="315" // Altura del video (ajusta según tus necesidades)
+        src="https://www.youtube.com/watch?v=YaOorZmNVck" // Reemplaza TU_URL_DEL_VIDEO con el enlace de inserción que copiaste
+        frameborder="0"
+        allowfullscreen
+        title="Video de YouTube"
+      ></iframe> */}
+
+<iframe src="https://www.youtube.com/embed/YaOorZmNVck?si=u2m2DRTEPSynLGCm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+  hola
+</iframe>
+<iframe  src="https://www.youtube.com/embed/3lBg3dRpg40?si=MI1TA7rG_sygmqJB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+  hola2
+</iframe>
+
+<iframe  src="https://www.youtube.com/embed/_J_LNeypkyk?si=RP9aAYyeqRM3J6EW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+  hola3
+</iframe>
 
 </div>
 </p>
@@ -61,14 +132,14 @@ tipo de obra relacionada con Vidrio, Acero y Aluminio, realizamos reparaciones e
 o mantenimiento de instalaciones en vidrio,arreglo de puertas en vidrio en general.
 </p>
 
-<h1 className={styled.letComunes}>CLIENTES QUE CONFIAN EN NOSOTROS</h1>
+<h1 className={styled.letComunes}>{/*text1*/}CLIENTES QUE CONFIAN EN NOSOTROS</h1>
 <p>
-<div className={styled.div}>
+<div className={styled.div1}>
 <img  className={styled.imgT}src="https://www.vidriosdelasabana.com/wp-content/uploads/2016/04/logo-empresa-300x248-300x212.png"/>
 <img  className={styled.imgT}src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgGfeNrmoQnW1o3YPMM00C2guPP5csN0f4AoJb-CASS45xz_eK0IWz1sCYgif835E7YNE&usqp=CAU"/>
 <img  className={styled.imgT}src="https://distribuidoranikoll.com/wp-content/uploads/2023/04/IMG_20230426_120951_692.jpg"/>
 <img  className={styled.imgT}src="https://mir-s3-cdn-cf.behance.net/projects/404/e6ea2a46532305.Y3JvcCw0MDQsMzE2LDQ5Myw2NzM.jpg"/>
-<img  className={styled.imgE}src="https://img.freepik.com/fotos-premium/5-estrellas-oro_103577-4146.jpg"/>
+
 
 </div>
 </p>
@@ -76,21 +147,9 @@ o mantenimiento de instalaciones en vidrio,arreglo de puertas en vidrio en gener
 </p>
 <h1 className={styled.letComunes}>CUALIDADES DE LA EMPRESA</h1>
 <img  className={styled.img}src="https://exactitudeconsultancy.com/wp-content/uploads/2022/03/column-chart-98-e1648821697714.jpg"/>
-<h1 className={styled.letComunes}>
-  PRODUCTOS
-</h1>
-<div className={styled.divL}>
-<Link to={`/imgvidrio`}>
- <img  className={styled.img} src='./divisiones1.jpeg' />
-</Link>
+<h1 className={styled.letComunes}>{/*text2*/}PRODUCTOS</h1>
 
-<Link to={`/imgfachadas`}>
-<img  className={styled.img} src='./fachada1.jpeg' />
-</Link>
-<Link to={'/imgdivisiones'}>
-<img  className={styled.img} src='./vidrio1.jpeg' />
-</Link>
-</div>
+<ImgType />
     </div>
     
   );
