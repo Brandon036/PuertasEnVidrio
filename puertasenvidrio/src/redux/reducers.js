@@ -1,16 +1,29 @@
-import {GET_IMAGEN, POST_IMAGEN,GET_FACHADA, POST_FACHADA,GET_DIVISIONES,POST_DIVISIONES, GET_LOGIN,LOGIN_ERROR} from "./actions";
+import {GET_IMAGEN, POST_IMAGEN,GET_FACHADA, POST_FACHADA,GET_DIVISIONES,POST_DIVISIONES, GET_LOGIN,LOGIN_ERROR, GET_ADMIN, AUTHENTICATED} from "./actions";
 
 const initialState={
     imagenes:  [],
     fachadas: [],
     divisiones:[],
-    isLoggeIn: false
+    isLoggeIn: [],
+    admin: {},
+    auth: []
 }
+
 
 
 const rootReducer=(state=initialState,action)=>{
 switch(action.type){
-
+case AUTHENTICATED:{
+    return{
+...state,
+auth: action.payload
+    }}
+    case GET_ADMIN:{
+        return{
+            ...state,
+admin: action.payload
+        }
+    }
     case GET_IMAGEN:
         return {...state, 
         imagenes: action.payload,

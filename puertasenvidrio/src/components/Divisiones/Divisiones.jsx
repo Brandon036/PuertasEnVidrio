@@ -9,7 +9,7 @@ const Divisiones=()=>{
     const divisiones = useSelector(state => state.divisiones)
     const dispatch = useDispatch()
 
-
+console.log(divisiones)
     useEffect(()=>{
         dispatch(getDivisiones())
             },[dispatch])

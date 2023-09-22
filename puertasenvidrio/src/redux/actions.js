@@ -9,7 +9,8 @@ export const GET_DIVISIONES = "GET_DIVISIONES"
 export const POST_DIVISIONES ="POST_DIVISIONES"
 export const GET_LOGIN = "GET_LOGIN"
 export const LOGIN_ERROR= "LOGIN_ERROR"
-
+export const GET_ADMIN='GET_ADMIN'
+export const AUTHENTICATED = "AUTHENTICATED"
 
 export const login = (payload) => {
     return {
@@ -17,8 +18,22 @@ export const login = (payload) => {
       payload: payload
     };
   };
-  
-  
+  export const authenticated = (userData) => {
+    return async function(dispatch) {
+      try {
+        const response = await axios.get('http://localhost:3001/admin/name', userData);
+        const datas =  response.data
+        dispatch({type: AUTHENTICATED, payload: datas})
+        alert('LOGUEADO');
+        // Si tu API devuelve algún dato relacionado con la autenticación, puedes usarlo aquí.
+        // Por ejemplo, puedes dispatch una acción con el token de autenticación.
+      // Esto dependerá de cómo manejes la autenticación en tu aplicación.
+        return response;
+      } catch (error) {
+        alert('l');
+      }
+    };
+  };
   export const loginError = (errorMessage) => {
     return {
       type: 'LOGIN_ERROR',
@@ -53,6 +68,21 @@ export const getImagen = ()=>{
     
     }
 }
+
+export const getAdmin = ()=>{
+  return async function(dispatch){
+try {
+  const response = await axios.get('http://localhost:3001/admin')
+  const adminInfoE= response.data[0].email
+  const adminInfoP= response.data[0].password
+  dispatch({type: GET_ADMIN, payload: {adminInfoE, adminInfoP}})
+} catch (error) {
+  alert('USUARIO INCORRECTO')
+}
+  }
+}
+
+
 
 export function postFachada (payload){
     return async function(){

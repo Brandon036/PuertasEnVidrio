@@ -1,32 +1,57 @@
 import { Link } from "react-router-dom";
 import styled from "./Admin.module.css"
 import { useDispatch, useSelector } from "react-redux";
-import { useState } from "react";
-import { login } from "../../redux/actions";
+import { useEffect, useState } from "react";
+import { login, getAdmin, authenticated} from "../../redux/actions";
+
 
 function Admin() {
 
+  let state = useSelector((state) => state.isLoggeIn)
+  let infoAdmin = useSelector((state) => state.admin)
+let authent = useSelector((state)=>state.auth)
+
+
+console.log(authent)
+
   const dispatch = useDispatch()
+  const [input, setInput] = useState({
+    email:"",
+password:""
+  })
 
- let state = useSelector((state) => state.isLoggeIn)
 
-  console.log(state)
 
   //tenemos que crear un boton que haga cambiar true a false
 
-  const handleTrue = ()=>{
-    dispatch(login(true))
-  }
+ 
+
+
+  const handleChange = (e) => {
+    setInput({
+      ...input,
+      [e.target.name]: e.target.value,
+    });
+  };
   
-  const handleFalse = ()=>{
-    dispatch(login(false))
+  const handleSubmit=(e)=>{
+    e.preventDefault();
+      dispatch(authenticated(input));
+    
   }
-  
-if(state === true){   
+
+
+  useEffect(()=>{
+    dispatch(getAdmin())
+  },[dispatch])
+
+if(input.email === infoAdmin.adminInfoE && input.password === infoAdmin.adminInfoP ){   
+console.log(input.email)
 
     return (
 
       <div className={styled.div}>
+
       <h1>Admin</h1>
       <Link to={`/formimg`}>
         <div className={styled.B}>
@@ -46,7 +71,7 @@ Crear Divisiones
 </button>
 </Link>
 
-<button onClick={()=>handleFalse()} className={styled.cs}>
+<button className={styled.cs}>
   Cerrar sesion 
 </button>
 
@@ -57,29 +82,36 @@ Crear Divisiones
 
       return (
         <div>
+                <form onSubmit={(e) => handleSubmit(e)}>
+
        <h1> Login</h1>
        <p>
        gmail:
 <input
               type="text"
-              name="gmail"
+              name="email"
+              value={input.email}
+               onChange={(e) => handleChange(e)}
               placeholder="gmail"
-              required
+             required
 />
 </p>
 <p>
 password:
 <input
 type="text"
+value={input.password}
 name="password"
+onChange={(e) => handleChange(e)}
 placeholder="password"
 required
 />
 </p>
 
-<button onClick={()=> handleTrue()}>
+<button onSubmit={(e) => handleSubmit(e)} type="submit">
   Ingresar
 </button>
+</form>
         </div>
       )
     }
