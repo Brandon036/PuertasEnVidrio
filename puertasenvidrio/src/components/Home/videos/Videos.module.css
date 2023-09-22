@@ -1,0 +1,10 @@
+.Videosss{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+gap: 15px;
+}
+iframe{
+    margin: 0 auto;
+    width:400px; 
+    height:200px;
+  }
