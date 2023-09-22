@@ -34,6 +34,15 @@ password:""
     });
   };
   
+    const handleLogout = () => {
+      setInput({
+        ...input,
+        email:"",
+        password:""
+      }); 
+  };
+
+
   const handleSubmit=(e)=>{
     e.preventDefault();
       dispatch(authenticated(input));
@@ -71,7 +80,7 @@ Crear Divisiones
 </button>
 </Link>
 
-<button className={styled.cs}>
+<button onClick={()=>handleLogout()} className={styled.cs}>
   Cerrar sesion 
 </button>
 
