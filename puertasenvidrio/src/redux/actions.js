@@ -30,7 +30,6 @@ export const login = (payload) => {
       // Esto dependerá de cómo manejes la autenticación en tu aplicación.
         return response;
       } catch (error) {
-        alert('l');
       }
     };
   };

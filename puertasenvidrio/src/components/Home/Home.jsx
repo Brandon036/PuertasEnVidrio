@@ -1,5 +1,6 @@
 import styled from './Home.module.css'
 
+import { Link } from "react-router-dom";
 
 import ImgTypee from "./imgType/ImgType.1.jsx"
 import Videos from './videos/Videos';
@@ -10,7 +11,7 @@ function Home() {
   
   return (
     <div className={styled.divF} >
-  
+ 
       
       <div className={styled.glassText}>
       <div className={styled.word}>
@@ -81,8 +82,12 @@ o mantenimiento de instalaciones en vidrio,arreglo de puertas en vidrio en gener
 
   <ImgTypee />
   
+  <Link to={'/admin'}>
 
-
+  <button>
+  Admin
+  </button>
+</Link>
     </div>
     
   );

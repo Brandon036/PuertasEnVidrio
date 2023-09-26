@@ -1,32 +1,23 @@
 import { Link } from "react-router-dom";
-import styled from "./Admin.module.css"
+import styled from "./Admin.module.css";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect, useState } from "react";
-import { login, getAdmin, authenticated} from "../../redux/actions";
-
+import { login, getAdmin, authenticated } from "../../redux/actions";
 
 function Admin() {
+  let state = useSelector((state) => state.isLoggeIn);
+  let infoAdmin = useSelector((state) => state.admin);
+  let authent = useSelector((state) => state.auth);
 
-  let state = useSelector((state) => state.isLoggeIn)
-  let infoAdmin = useSelector((state) => state.admin)
-let authent = useSelector((state)=>state.auth)
+  console.log(authent);
 
-
-console.log(authent)
-
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
   const [input, setInput] = useState({
-    email:"",
-password:""
-  })
+    email: "",
+    password: ""
+  });
 
-
-
-  //tenemos que crear un boton que haga cambiar true a false
-
- 
-
-
+  const [showLogin, setShowLogin] = useState(true); // Nuevo estado local
   const handleChange = (e) => {
     setInput({
       ...input,
@@ -34,98 +25,83 @@ password:""
     });
   };
   
-    const handleLogout = () => {
-      setInput({
-        ...input,
-        email:"",
-        password:""
-      }); 
+  const handleLogin = (e) => {
+    e.preventDefault();
+    dispatch(authenticated(input));
+
+    if (input.email === infoAdmin.adminInfoE && input.password === infoAdmin.adminInfoP) {
+      dispatch(login(true));
+      setShowLogin(false);
+    }
   };
 
+  const handleLogout = () => {
+    dispatch(login(false));
+    setShowLogin(true);
+  };
 
-  const handleSubmit=(e)=>{
-    e.preventDefault();
-      dispatch(authenticated(input));
-    
-  }
+  useEffect(() => {
+    dispatch(getAdmin());
+  }, [dispatch]);
 
+  return (
+    <div>
+      {showLogin ? (
+        <div className={styled.container}>
+          <form>
+            <h1 className={styled.loginHeading}>Login</h1>
+            <p>
+              gmail:
+              <input
+                type="text"
+                name="email"
+                className={styled.loginInput}
 
-  useEffect(()=>{
-    dispatch(getAdmin())
-  },[dispatch])
+                value={input.email}
+                onChange={(e) => handleChange(e)}
+                placeholder="gmail"
+                required
+              />
+            </p>
+            <p>
+              password:
+              <input
+                          className={styled.loginInput}
 
-if(input.email === infoAdmin.adminInfoE && input.password === infoAdmin.adminInfoP ){   
-console.log(input.email)
-
-    return (
-
-      <div className={styled.div}>
-
-      <h1>Admin</h1>
-      <Link to={`/formimg`}>
-        <div className={styled.B}>
-<button className={styled.button1}>
-Crear Puertas de vidrio
-</button>
-</div>
-</Link>
-<Link to={`/formfacha`}>
-<button className={styled.button2}>
-Crear Fachadas
-</button>
-</Link>
-<Link to={`/formdivisiones`}>
-<button className={styled.button3}>
-Crear Divisiones
-</button>
-</Link>
-
-<button onClick={()=>handleLogout()} className={styled.cs}>
-  Cerrar sesion 
-</button>
-
-      </div>
-  
-    );
-    } else {
-
-      return (
-        <div>
-                <form onSubmit={(e) => handleSubmit(e)}>
-
-       <h1> Login</h1>
-       <p>
-       gmail:
-<input
-              type="text"
-              name="email"
-              value={input.email}
-               onChange={(e) => handleChange(e)}
-              placeholder="gmail"
-             required
-/>
-</p>
-<p>
-password:
-<input
-type="text"
-value={input.password}
-name="password"
-onChange={(e) => handleChange(e)}
-placeholder="password"
-required
-/>
-</p>
-
-<button onSubmit={(e) => handleSubmit(e)} type="submit">
-  Ingresar
-</button>
-</form>
+                type="text"
+                value={input.password}
+                name="password"
+                onChange={(e) => handleChange(e)}
+                placeholder="password"
+                required
+              />
+            </p>
+            <button  className={styled.loginButton} onClick={(e) => handleLogin(e)} type="submit">
+              Ingresar
+            </button>
+          </form>
         </div>
-      )
-    }
-  }
-  
-  export default Admin;
-  
- 
+      ) : (
+        <div className={styled.div}>
+          <h1>Admin</h1>
+          <Link to={`/formimg`}>
+            <div className={styled.B}>
+              <button className={styled.button1}>Crear Puertas de vidrio</button>
+            </div>
+          </Link>
+          <Link to={`/formfacha`}>
+            <button className={styled.button2}>Crear Fachadas</button>
+          </Link>
+          <Link to={`/formdivisiones`}>
+            <button className={styled.button3}>Crear Divisiones</button>
+          </Link>
+          <button className={styled.cs} onClick={handleLogout}>
+            Cerrar sesión
+          </button>
+        </div>
+      )}
+    </div>
+  );
+}
+
+export default Admin;
