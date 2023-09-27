@@ -1,33 +1,33 @@
 import React from 'react'
 import  { useEffect, useState } from 'react';
 
- export function Titulos() {
+//  export function Titulos() {
 
-    const [text, setText] = useState('');
-    const originalText = "PUERTAS EN VIDRIO";
-    let index = 0;
+//     const [text, setText] = useState('');
+//     const originalText = "PUERTAS EN VIDRIO";
+//     let index = 0;
   
-    useEffect(() => {
-      const interval = setInterval(() => {
-        if (index <= originalText.length) {
-          setText(originalText.slice(0, index));
-          index++;
-        } else {
-          clearInterval(interval);
-        }
-      }, 100); // Velocidad de escritura (en milisegundos)
+//     useEffect(() => {
+//       const interval = setInterval(() => {
+//         if (index <= originalText.length) {
+//           setText(originalText.slice(0, index));
+//           index++;
+//         } else {
+//           clearInterval(interval);
+//         }
+//       }, 100); // Velocidad de escritura (en milisegundos)
   
-      return () => clearInterval(interval);
-    }, []);
+//       return () => clearInterval(interval);
+//     }, []);
 
-  return (
-    <div>
-     <h1>
-      {text}
-      </h1> 
-    </div>
-  )
-}
+//   return (
+//     <div>
+//      <h1>
+//       {text}
+//       </h1> 
+//     </div>
+//   )
+// }
  export function Titulos2() {
 
 

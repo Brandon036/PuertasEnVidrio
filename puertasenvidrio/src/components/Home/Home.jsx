@@ -14,8 +14,8 @@ function Home() {
   return (
     <div className={styled.divF} >
       <header>
-        <h3>{Titulos()}</h3>
-  
+        {/* <h3>{Titulos()}</h3> */}
+  <h3>Puertas En Vidrio</h3>
       </header>
       
    <body>
