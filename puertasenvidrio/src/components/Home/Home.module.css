@@ -1,16 +1,28 @@
-.let{
-    position: relative;
-    top: 0px; left: -480px;    
-    text-align: justify;
-  
-color: rgb(255, 255, 255);
+header{
+  background-color: black;
+  position: fixed;
+  margin: 0 auto;
+  padding: 0 auto;
+  height: 22%;
+  width: 100%;
+  z-index: 5;  
+ 
+}
+header h3{
+  margin: 0;
+  color:white;
+  display: flex;
+  flex-direction: column;
+
+}
+.cualidades{
+  color: #fff;
 }
 
-.div{
-    
 
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+.div{
+   display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
 gap: 20px;
 }
 .div1{
@@ -122,11 +134,3 @@ width: 100hv
 
  }
 
-
-
-
-.letComunes{
-  
-    color:azure
-
-}

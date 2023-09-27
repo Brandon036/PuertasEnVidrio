@@ -1,0 +1,12 @@
+.TextTwo {
+    background-color: rgba(27, 27, 27, 0.8);
+    padding: 1rem;
+    color: aliceblue;
+}
+.TextTwo h2{
+    font-size: 2rem;
+}
+.TextTwo p{
+    font-size: 1.5rem;
+    text-align: justify;
+}

@@ -21,7 +21,11 @@ import  { useEffect, useState } from 'react';
     }, []);
 
   return (
-    <div>{text}</div>
+    <div>
+     <h1>
+      {text}
+      </h1> 
+    </div>
   )
 }
  export function Titulos2() {
