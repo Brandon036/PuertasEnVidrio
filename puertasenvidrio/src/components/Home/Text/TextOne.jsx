@@ -3,12 +3,7 @@ import style from "./TextOne.module.css"
 function TextOne() {
   return (
     <div className={style.TextOne}>
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
+      
         <h4>BIENVENIDOS A UNA DE LAS TRES MEJORES EMPRESAS QUE TIENE BOGOTA Y CUNDINAMARCA
 EN EL RAMO DEL VIDRIO ARQUITECTONICO, CON NUESTRO CONOCIMIENTO DE MAS DE 15 AÑOS DE EXPERIENCIA
 Y UN GRUPO DE TRABAJO EXPERTO NUESTRO SERVICIO PREMIUM ES TOTALMENTE

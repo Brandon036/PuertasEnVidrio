@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 import ImgTypee from "./imgType/ImgType.1.jsx"
 import Videos from './videos/Videos';
-import { Titulos, Titulos2,Titulos3 } from './Titulos/Titulos';
+import { /*Titulos*/ Titulos2,Titulos3 } from './Titulos/Titulos';
 import TextOne from './Text/TextOne';
 import TextTwo from './TextTwo/TextTwo';
 import Contactanos from "./Contactanos/Contactanos"
