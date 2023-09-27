@@ -6,13 +6,18 @@ header{
   height: 22%;
   width: 100%;
   z-index: 5;  
+  display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
  
 }
-header h3{
-  margin: 0;
+header h1{
+ 
   color:white;
   display: flex;
   flex-direction: column;
+  text-align: center;
+  align-items: center;
 
 }
 .cualidades{

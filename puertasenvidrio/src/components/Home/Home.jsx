@@ -15,7 +15,7 @@ function Home() {
     <div className={styled.divF} >
       <header>
         {/* <h3>{Titulos()}</h3> */}
-  <h3>Puertas En Vidrio</h3>
+  <h1>Puertas En Vidrio</h1>
       </header>
       
    <body>
