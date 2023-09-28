@@ -6,8 +6,13 @@
     grid-template-columns: repeat(auto-fit, minmax(400px, 3fr));
    gap: 5px; */
    background: rgb(32, 32, 32);
-   
+   margin-top: 1rem;
 }
+.escon{
+    background-color: rgb(32, 32, 32) ;
+    border-radius: 50%;
+    color: transparent;
+   }
 .Contactanos img{
     width: 50%;
     position: relative;
@@ -17,4 +22,19 @@
 .Contactanos h1{
     color: aliceblue;
     justify-content: start;
+}
+.gif1{
+    text-align: center;
+    background: url("./Gifs/giphy.webp") no-repeat;
+    padding: 1rem;
+    width: 300px;
+    height: 200px;
+    font-size: 1.5rem;
+}
+.gif2{
+
+   padding: 1rem;
+    background: url("./Gifs/giphy2.webp") no-repeat;
+    width: 300px;
+    height: 200px;
 }

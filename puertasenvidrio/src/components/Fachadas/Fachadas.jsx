@@ -3,7 +3,7 @@ import { getFachada } from "../../redux/actions"
 import { useEffect } from "react"
 import styled from "./Fachadas.module.css"
 import Card from "../Card/Card"
-
+import { Link } from "react-router-dom";
 const Fachadas=()=>{
 
     const fachadas = useSelector(state => state.fachadas)
@@ -19,7 +19,7 @@ const Fachadas=()=>{
      
             <div>
             <h1 className={styled.let}>Fachadas</h1>
-<div className={styled.container}>     
+
 {
 
     fachadas.map((img)=>{
@@ -34,7 +34,11 @@ const Fachadas=()=>{
     }
     )
 }
-</div>
+<Link to={"/"} >
+<button>
+    Atras
+</button>
+</Link>
 </div>
 
     )

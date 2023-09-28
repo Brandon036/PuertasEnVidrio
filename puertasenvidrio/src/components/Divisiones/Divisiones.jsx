@@ -3,7 +3,7 @@ import { getDivisiones, getFachada } from "../../redux/actions"
 import { useEffect } from "react"
 import styled from "./Divisiones.module.css"
 import Card from "../Card/Card"
-
+import { Link } from "react-router-dom";
 const Divisiones=()=>{
 
     const divisiones = useSelector(state => state.divisiones)
@@ -18,7 +18,7 @@ console.log(divisiones)
         <div>
 <h1 className={styled.let}>Divisiones</h1>
 
-<div className={styled.container}>     
+    
 
 {
     divisiones.map((img)=>{
@@ -29,7 +29,11 @@ console.log(divisiones)
             description={img.description}/>        )
     })
 }
-</div>
+<Link to={"/"} >
+<button>
+    Atras
+</button>
+</Link>
 </div>
 
     )

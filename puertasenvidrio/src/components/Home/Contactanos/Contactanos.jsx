@@ -1,20 +1,26 @@
 import React from 'react'
 import style from "./Contactanos.module.css"
-
+import { Link } from "react-router-dom";
 function Contactanos() {
   return (
     <div> 
     <div className={style.Contactanos}>
         <h1>
-              CONTACTANOS 
+              CONTACTANOS<button 
+              className={style.escon}>
+
+<Link to={'/admin'}>
+  .
+  </Link>
+  </button>
         </h1>
-           
-            <a href="https://wa.me/+573105689393?text=¡Hola! Estoy interesado en tus servicios.">
-                 <img src="https://media.giphy.com/media/8rElnPqWAxlP83PPI3/giphy.gif" alt=""  />
+        
+            <a className={style.gif1} href="https://wa.me/+573015995954?text=¡Hola! Estoy interesado en tus servicios.">
+                 
             </a>
-           <a href="mailto:bcbjpro036crak@gmail.com">
-            <img src="https://cdn.dribbble.com/users/2118564/screenshots/4240923/gmail-sent-animation.gif" alt="" />
-           </a>
+           <a className={style.gif2} href="mailto:">
+           
+            </a>
            {/* <a href="">
             <img src="" alt="" />
            </a> */}

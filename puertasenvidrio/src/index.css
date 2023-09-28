@@ -6,6 +6,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
+  background-image: url("../public/img/fondoV.gif"); /* Ruta a tu imagen GIF */
+  width: 100hv;
 }
 
 code {

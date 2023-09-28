@@ -1,6 +1,6 @@
 import styled from './Home.module.css'
 
-import { Link } from "react-router-dom";
+
 
 import ImgTypee from "./imgType/ImgType.1.jsx"
 import Videos from './videos/Videos';
@@ -49,18 +49,14 @@ function Home() {
 </div>
 </p>
 
-<h1 className={styled.cualidades}>CUALIDADES DE LA EMPRESA</h1>
+<h1 className={styled.cualidades}>CUALIDADES DE LA EMPRESA </h1>
 <img  className={styled.imgT}src=""alt=""/>
 <h1 className={styled.letComunes}>{Titulos3()}</h1>
 
 <div>
     <ImgTypee />
 </div>
-  <button>
-<Link to={'/admin'}>
-  Admin
-  </Link>
-  </button>
+  
    </body>
 
    <footer>
