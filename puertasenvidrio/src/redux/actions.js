@@ -12,6 +12,24 @@ export const LOGIN_ERROR= "LOGIN_ERROR"
 export const GET_ADMIN='GET_ADMIN'
 export const AUTHENTICATED = "AUTHENTICATED"
 
+export const POST_ADMIN = "POST_ADMIN"
+
+
+export const postAdmin = (iduser) =>{
+  return async function (dispatch) {
+    // eslint-disable-next-line no-useless-catch
+    try {
+       const response = await axios.post("http://localhost:3001/admin", iduser);
+  
+      console.log('el response de login:',response.data);
+      return  dispatch({type: POST_ADMIN, payload: response.data.user});
+    } catch (error) {
+      throw error;
+    }
+
+  };
+}
+
 export const login = (payload) => {
     return {
       type: GET_LOGIN,
